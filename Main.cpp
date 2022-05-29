@@ -15,12 +15,8 @@ cout<<"1: Addition        \t \t \t7: Sin "<<endl
     <<"6: Square Root     \t \t \t12: Inverse Tan "<<endl;
 }
 
-class op_dasar{
-    public:
-    
-}
-
 int main() {
+    menu();
   return 0;
 }
 
