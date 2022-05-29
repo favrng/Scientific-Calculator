@@ -79,7 +79,7 @@ void op_dasar::pilihan() {
         exponent(x,y);
         break;
     case 6:
-        cout << "Enter the number" << endl;
+        cout << "Enter The Number" << endl;
         cin >> x;
         root(x);
         break;
