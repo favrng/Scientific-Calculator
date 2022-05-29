@@ -23,6 +23,8 @@ class op_dasar {
     void addition(int a,int b);
     void substract(int a,int b);
     void exponent(int a,int b);
+    void cosinus(int a);
+    void arctangen(int a);
     void root(int a);
     void tangen(int a,int b);};
 
@@ -49,6 +51,20 @@ void op_dasar::exponent(int a,int b){
 
 void op_dasar::root(int a){
     hasil= sqrt(a);
+    cout<<"hasilnya adalah "<<hasil<<endl;
+    
+}
+
+void op_dasar::cosinus(int a){
+    c = a*(22/7)/180;
+	hasil= cos(c);
+    cout<<"hasilnya adalah "<<hasil<<endl;
+    
+}
+
+void op_dasar::arctangen(int a){
+	c = a*(22/7)/180;
+    hasil= atan(c);
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
@@ -82,6 +98,16 @@ void op_dasar::pilihan() {
         cout << "Enter The Number" << endl;
         cin >> x;
         root(x);
+        break;
+    case 8:
+        cout << "Enter the number" << endl;
+        cin >> x;
+        cos(x);
+        break;
+    case 12:
+        cout << "Enter the number" << endl;
+        cin >> x;
+        atan(x);
         break;
     default:
         cout << "Invalid input. Try Again!" << endl;
