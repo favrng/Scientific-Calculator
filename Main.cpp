@@ -20,10 +20,18 @@ class op_dasar {
     int a;
     float b,x,y,hasil;
     void pilihan();
+    void addition(int a,int b);
     void substract(int a,int b);
     void exponent(int a,int b);
+    void root(int a);
     void tangen(int a,int b);};
+
+void op_dasar::addition(int a,int b){
+    hasil= a+b;
+    cout<<"hasilnya adalah "<<hasil<<endl;
     
+}
+
 void op_dasar::substract(int a,int b){
     if (a<b){
         hasil = b-a;
@@ -39,10 +47,23 @@ void op_dasar::exponent(int a,int b){
     cout<<"hasilnya adalah "<<hasil<<endl;
 }
 
+void op_dasar::root(int a){
+    hasil= sqrt(a);
+    cout<<"hasilnya adalah "<<hasil<<endl;
+    
+}
+
 void op_dasar::pilihan() {
     cout << "Enter your choice" << endl;
     cin >> a;
     switch(a){
+    case 1:
+        cout << "Enter first number" << endl;
+        cin >> x;
+        cout << "Enter second number" << endl;
+        cin >> y;
+        addition(x,y);
+        break;
     case 2:
         cout << "Enter first number" << endl;
         cin >> x;
@@ -56,6 +77,11 @@ void op_dasar::pilihan() {
         cout << "Enter second number" << endl;
         cin >> y;
         exponent(x,y);
+        break;
+    case 6:
+        cout << "Enter the number" << endl;
+        cin >> x;
+        root(x);
         break;
     default:
         cout << "Invalid input. Try Again!" << endl;
