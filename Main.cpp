@@ -25,7 +25,12 @@ class op_dasar {
     void tangen(int a,int b);};
     
 void op_dasar::substract(int a,int b){
-    hasil= a+b;
+    if (a<b){
+        hasil = b-a;
+    }
+    else if (a>=b){
+        hasil= a-b;
+    }
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
@@ -64,4 +69,3 @@ int main(){
     
   return 0;
 }
-
