@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include <math.h>
 using namespace std;
 #define PI 3.14159265359
 
@@ -24,7 +24,7 @@ class op_dasar {
     void substract(float a,float b);
     void exponent(float a,float b);
     void tangen(float a);
-    
+    void incos(float a);
 };
 
     
@@ -40,6 +40,9 @@ void op_dasar::tangen(float a){
     hasil = tan(a*PI/180);
     cout<<hasil;
 }
+void op_dasar::incos(float a){
+    hasil = acos(a*pi/180);
+    cout<<hasil;
 
 void op_dasar::pilihan() {
     cout << "Enter your choice" << endl;
@@ -63,6 +66,10 @@ void op_dasar::pilihan() {
     case 9: cout<<"Enter the Number"<<endl;
             cin>>x;
             tangen(x);
+            break;
+    case 11: cout<<"Enter the Number"<<endl;
+            cin>>x;
+            incos(x);
             break;
             
     default:
