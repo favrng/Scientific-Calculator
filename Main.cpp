@@ -1,6 +1,7 @@
 #include <iostream>
-#include <cmath>
+#include <math.h>
 using namespace std;
+#define PI 3.14159265359
 
 void menu(){
 cout<<"********************** Scientific Calculator ******************************"<<endl;
@@ -20,50 +21,33 @@ class op_dasar {
     int a;
     float b,x,y,hasil;
     void pilihan();
-    void addition(int a,int b);
-    void substract(int a,int b);
-    void exponent(int a,int b);
-    void root(int a);
-    void tangen(int a,int b);};
+    void substract(float a,float b);
+    void exponent(float a,float b);
+    void tangen(float a);
+    void incos(float a);
+};
 
-void op_dasar::addition(int a,int b){
-    hasil= a+b;
-    cout<<"hasilnya adalah "<<hasil<<endl;
     
+void op_dasar::substract(float a,float b){
+    hasil= a-b;
+    cout<< hasil;
 }
-
-void op_dasar::substract(int a,int b){
-    if (a<b){
-        hasil = b-a;
-    }
-    else if (a>=b){
-        hasil= a-b;
-    }
-    cout<<"hasilnya adalah "<<hasil<<endl;
-    
-}
-void op_dasar::exponent(int a,int b){
+void op_dasar::exponent(float a,float b){
     hasil= pow(a,b);
-    cout<<"hasilnya adalah "<<hasil<<endl;
+    cout<< hasil;
 }
-
-void op_dasar::root(int a){
-    hasil= sqrt(a);
-    cout<<"hasilnya adalah "<<hasil<<endl;
-    
+void op_dasar::tangen(float a){
+    hasil = tan(a*PI/180);
+    cout<<hasil;
 }
-
+void op_dasar::incos(float a){
+    hasil = acos(a)*PI/180;
+    cout<<hasil;
+}
 void op_dasar::pilihan() {
     cout << "Enter your choice" << endl;
     cin >> a;
     switch(a){
-    case 1:
-        cout << "Enter first number" << endl;
-        cin >> x;
-        cout << "Enter second number" << endl;
-        cin >> y;
-        addition(x,y);
-        break;
     case 2:
         cout << "Enter first number" << endl;
         cin >> x;
@@ -78,11 +62,16 @@ void op_dasar::pilihan() {
         cin >> y;
         exponent(x,y);
         break;
-    case 6:
-        cout << "Enter the number" << endl;
-        cin >> x;
-        root(x);
-        break;
+        
+    case 9: cout<<"Enter the Number"<<endl;
+            cin>>x;
+            tangen(x);
+            break;
+    case 11: cout<<"Enter the Number"<<endl;
+            cin>>x;
+            incos(x);
+            break;
+            
     default:
         cout << "Invalid input. Try Again!" << endl;
     }
