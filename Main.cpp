@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-#define PI 3.14
+#define PI 3.14159265359
 
 void menu(){
 cout<<"********************** Scientific Calculator ******************************"<<endl;
