@@ -29,10 +29,10 @@ void op_dasar::substract(int a,int b){
         hasil = b-a;
     }
     else if (a>=b){
-        hasil= a-b;
+        hasil = a-b;
     }
     cout<<"hasilnya adalah "<<hasil<<endl;
-    
+
 }
 void op_dasar::exponent(int a,int b){
     hasil= pow(a,b);
@@ -63,9 +63,12 @@ void op_dasar::pilihan() {
 }
 
 int main(){
-    op_dasar Calculator;
-    menu();
-    Calculator.pilihan();
+    while (true) {
+        op_dasar Calculator;
+        menu();
+        Calculator.pilihan();
+    }
     
+   
   return 0;
 }
