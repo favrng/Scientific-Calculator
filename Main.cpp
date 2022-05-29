@@ -18,24 +18,24 @@ cout<<"1: Addition        \t \t \t7: Sin "<<endl
 
 class op_dasar {
     public:
-    int a;
-    float b,x,y,hasil;
+    int opsi;
+    float a,b,x,y,hasil;
     void pilihan();
-    void addition(int a,int b);
-    void substract(int a,int b);
-    void exponent(int a,int b);
-    void cosinus(int a);
-    void arctangen(int a);
-    void root(int a);
-    void tangen(int a,int b);};
+    void addition(float a,float b);
+    void substract(float a,float b);
+    void exponent(float a,float b);
+    void cosinus(float a);
+    void arctangen(float a);
+    void root(float a);
+    void tangen(float a,float b);};
 
-void op_dasar::addition(int a,int b){
+void op_dasar::addition(float a,float b){
     hasil= a+b;
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
 
-void op_dasar::substract(int a,int b){
+void op_dasar::substract(float a,float b){
     if (a<b){
         hasil = b-a;
     }
@@ -45,24 +45,24 @@ void op_dasar::substract(int a,int b){
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
-void op_dasar::exponent(int a,int b){
+void op_dasar::exponent(float a,float b){
     hasil= pow(a,b);
     cout<<"hasilnya adalah "<<hasil<<endl;
 }
 
-void op_dasar::root(int a){
+void op_dasar::root(float a){
     hasil= sqrt(a);
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
 
-void op_dasar::cosinus(int a){
+void op_dasar::cosinus(float a){
 	hasil= cos(a*PI/180);
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
 
-void op_dasar::arctangen(int a){
+void op_dasar::arctangen(float a){
     hasil= atan(a)*180/PI;
     cout<<"hasilnya adalah "<<hasil<<endl;
     
@@ -70,8 +70,8 @@ void op_dasar::arctangen(int a){
 
 void op_dasar::pilihan() {
     cout << "Enter your choice" << endl;
-    cin >> a;
-    switch(a){
+    cin >> opsi;
+    switch(opsi){
     case 1:
         cout << "Enter first number" << endl;
         cin >> x;
@@ -114,9 +114,11 @@ void op_dasar::pilihan() {
 }
 
 int main(){
-    op_dasar Calculator;
-    menu();
-    Calculator.pilihan();
+    while (true) {
+        op_dasar Calculator;
+        menu();
+        Calculator.pilihan();
+    }
     
   return 0;
 }
