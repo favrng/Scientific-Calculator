@@ -78,9 +78,10 @@ void op_dasar::pilihan() {
 }
 
 int main(){
+    while(true){
     op_dasar Calculator;
     menu();
     Calculator.pilihan();
-    
+    }
   return 0;
 }
