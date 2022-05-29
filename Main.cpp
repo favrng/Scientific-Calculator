@@ -38,11 +38,11 @@ void op_dasar::exponent(float a,float b){
 }
 void op_dasar::tangen(float a){
     hasil = tan(a*PI/180);
-    cout<<hasil<<endl;
+    cout<<"The result is "<<hasil<<endl;
 }
 void op_dasar::incos(float a){
     hasil = acos(a)*PI/180;
-    cout<<hasil<<endl;
+    cout<<"The Result is"<<hasil<<endl;
 }
 void op_dasar::pilihan() {
     cout << "Enter your choice" << endl;
@@ -78,10 +78,9 @@ void op_dasar::pilihan() {
 }
 
 int main(){
-    while(true){
     op_dasar Calculator;
     menu();
     Calculator.pilihan();
-    }
+    
   return 0;
 }
