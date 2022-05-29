@@ -41,7 +41,7 @@ void op_dasar::tangen(float a){
     cout<<hasil;
 }
 void op_dasar::incos(float a){
-    hasil = acos(a*pi/180);
+    hasil = acos(a*PI/180);
     cout<<hasil;
 
 void op_dasar::pilihan() {
