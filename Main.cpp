@@ -2,8 +2,9 @@
 #include <cmath>
 using namespace std;
 #define PI 3.14159265359
+int i = 0; //Counter
 
-void menu(){
+void menu_once(){
 cout<<"********************** Scientific Calculator ******************************"<<endl;
 cout<<"-------------------------------------------------------------------------------------"<<endl;
 cout<<"Choose an Operation Based on the Options provided below :"<<endl;
@@ -14,6 +15,10 @@ cout<<"1: Addition        \t \t \t7: Sin "<<endl
     <<"4: Division        \t \t \t10: Inverse Sin "<<endl
     <<"5: Exponent        \t \t \t11: Inverse Cos "<<endl
     <<"6: Square Root     \t \t \t12: Inverse Tan "<<endl;
+}
+
+void menu_repeat(){
+    cout << "Choose an Operation" << endl;
 }
 
 class op_dasar {
@@ -62,7 +67,10 @@ void op_dasar::inverse_sin(float a){
     cout<<"hasilnya adalah "<<hasil<<endl;
 }
 void op_dasar::sinus (float a){
-    hasil = sin(a/180*PI);
+    hasil = round(sin(a/180*PI));
+    if (hasil == -0){
+        hasil = 0;
+    }
     cout<<"hasilnya adalah "<<hasil<<endl;
 }
 
@@ -76,6 +84,7 @@ void op_dasar::pilihan() {
         cout << "Enter second number" << endl;
         cin >> y;
         substract(x,y);
+        i++;
         break;
     case 3:
         cout << "Enter first number" << endl;
@@ -83,6 +92,7 @@ void op_dasar::pilihan() {
         cout << "Enter second number" << endl;
         cin >> y;
         multiplication (x,y);
+        i++;
         break;
     case 4:
         cout << "Enter first number" << endl;
@@ -90,6 +100,7 @@ void op_dasar::pilihan() {
         cout << "Enter second number" << endl;
         cin >> y;
         division (x,y);
+        i++;
         break;
     case 5:
         cout << "Enter first number" << endl;
@@ -97,28 +108,36 @@ void op_dasar::pilihan() {
         cout << "Enter second number" << endl;
         cin >> y;
         exponent(x,y);
+        i++;
         break;
     
     case 7:
         cout << "Enter number" << endl;
         cin >> x;
         sinus (x);
+        i++;
         break;
     case 10:
         cout << "Enter number" << endl;
         cin >> x;
         inverse_sin (x);
+        i++;
         break;
     default:
         cout << "Invalid input. Try Again!" << endl;
+        i++;
     }
 
 }
 
 int main(){
-    while (true) {
-        op_dasar Calculator;
-        menu();
+    op_dasar Calculator;
+    if (i == 0){
+        menu_once();
+        Calculator.pilihan();
+    }
+    while (i>0) {
+        menu_repeat();
         Calculator.pilihan();
     }
     
