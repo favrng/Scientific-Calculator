@@ -102,12 +102,12 @@ void op_dasar::pilihan() {
     case 8:
         cout << "Enter the number" << endl;
         cin >> x;
-        cos(x);
+        cosinus(x);
         break;
     case 12:
         cout << "Enter the number" << endl;
         cin >> x;
-        atan(x);
+        arctangen(x);
         break;
     default:
         cout << "Invalid input. Try Again!" << endl;
