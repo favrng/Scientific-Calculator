@@ -63,7 +63,7 @@ void op_dasar::cosinus(int a){
 }
 
 void op_dasar::arctangen(int a){
-    hasil= atan(a*PI/180);
+    hasil= atan(a)*180/PI;
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
