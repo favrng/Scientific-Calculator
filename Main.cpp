@@ -30,19 +30,19 @@ class op_dasar {
     
 void op_dasar::substract(float a,float b){
     hasil= a-b;
-    cout<< hasil;
+    cout<< hasil<<endl;
 }
 void op_dasar::exponent(float a,float b){
     hasil= pow(a,b);
-    cout<< hasil;
+    cout<< hasil<<endl;
 }
 void op_dasar::tangen(float a){
     hasil = tan(a*PI/180);
-    cout<<hasil;
+    cout<<hasil<<endl;
 }
 void op_dasar::incos(float a){
     hasil = acos(a)*PI/180;
-    cout<<hasil;
+    cout<<hasil<<endl;
 }
 void op_dasar::pilihan() {
     cout << "Enter your choice" << endl;
