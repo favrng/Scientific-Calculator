@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+#define PI 3.14159265359
 
 void menu(){
 cout<<"********************** Scientific Calculator ******************************"<<endl;
@@ -56,15 +57,13 @@ void op_dasar::root(int a){
 }
 
 void op_dasar::cosinus(int a){
-    c = a*(22/7)/180;
-	hasil= cos(c);
+	hasil= cos(a*PI/180);
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
 
 void op_dasar::arctangen(int a){
-	c = a*(22/7)/180;
-    hasil= atan(c);
+    hasil= atan(a*PI/180);
     cout<<"hasilnya adalah "<<hasil<<endl;
     
 }
