@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+#define PI 3.14159265359
 
 void menu(){
 cout<<"********************** Scientific Calculator ******************************"<<endl;
@@ -22,8 +23,11 @@ class op_dasar {
     void pilihan();
     void substract(float a,float b);
     void multiplication (float a, float b);
+    void division (float a, float b);
     void exponent(float a,float b);
+    void sinus (float a);
     void tangen(float a, float b);
+    void inverse_sin (float a);
     
 };
     
@@ -43,8 +47,22 @@ void op_dasar::multiplication(float a, float b){
     cout << "hasilnya adalah " << hasil << endl;
 }
 
+void op_dasar::division (float a, float b){
+    hasil = a/b;
+    cout << "Hasilnya adalah " << hasil << endl;
+}
+
 void op_dasar::exponent(float a, float b){
     hasil= pow(a,b);
+    cout<<"hasilnya adalah "<<hasil<<endl;
+}
+
+void op_dasar::inverse_sin(float a){
+    hasil = (asin(a)/PI)*180;
+    cout<<"hasilnya adalah "<<hasil<<endl;
+}
+void op_dasar::sinus (float a){
+    hasil = sin(a/180*PI);
     cout<<"hasilnya adalah "<<hasil<<endl;
 }
 
@@ -66,6 +84,13 @@ void op_dasar::pilihan() {
         cin >> y;
         multiplication (x,y);
         break;
+    case 4:
+        cout << "Enter first number" << endl;
+        cin >> x;
+        cout << "Enter second number" << endl;
+        cin >> y;
+        division (x,y);
+        break;
     case 5:
         cout << "Enter first number" << endl;
         cin >> x;
@@ -73,9 +98,21 @@ void op_dasar::pilihan() {
         cin >> y;
         exponent(x,y);
         break;
+    
+    case 7:
+        cout << "Enter number" << endl;
+        cin >> x;
+        sinus (x);
+        break;
+    case 10:
+        cout << "Enter number" << endl;
+        cin >> x;
+        inverse_sin (x);
+        break;
     default:
         cout << "Invalid input. Try Again!" << endl;
     }
+
 }
 
 int main(){
