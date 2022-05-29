@@ -1,25 +1,26 @@
 #include <iostream>
-#include <string>
+#include <cmath>
 using namespace std;
 
-class MyMenu {       // The class
-  public:             // Access specifier
-    int MenuNumb ;    // Attribute (int variable)
-    string MenuString;  // Attribute (string variable)
-}
-
-int main() {
-  MyMenu menu;  // Create an object of MyClass
-
+void menu(){
 cout<<"********************** Scientific Calculator ******************************"<<endl;
 cout<<"-------------------------------------------------------------------------------------"<<endl;
 cout<<"Choose an Operation Based on the Options provided below :"<<endl;
 
-  // Access attributes and set values
-  menu.MenuNumb = 1;
-  menu.MenuString = "1: \t Addition \t \t \t 7: \t sin " ;
+cout<<"1: Addition        \t \t \t7: Sin "<<endl  
+    <<"2: Substraction    \t \t \t8: Cos"<<endl
+    <<"3: Multiplication  \t \t \t9: Tan "<<endl
+    <<"4: Division        \t \t \t10: Inverse Sin "<<endl
+    <<"5: Exponent        \t \t \t11: Inverse Cos "<<endl
+    <<"6: Square Root     \t \t \t12: Inverse Tan "<<endl;
+}
 
-  // Print values
-  cout << menu.MenuString; 
+class op_dasar{
+    public:
+    
+}
+
+int main() {
   return 0;
 }
+
