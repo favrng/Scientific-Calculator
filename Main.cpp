@@ -37,7 +37,7 @@ void op_dasar::exponent(float a,float b){
     cout<< hasil;
 }
 void op_dasar::tangen(float a){
-    hasil = (a*PI/180);
+    hasil = tan(a*PI/180);
     cout<<hasil;
 }
 
