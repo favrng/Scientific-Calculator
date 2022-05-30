@@ -95,6 +95,9 @@ void op_dasar::cosinus (float a){
 
 void op_dasar::tangen(float a){
     hasil = round((tan(a*PI/180))*10000)/10000;
+    if (hasil == -0.00){
+        hasil = 0.00;
+    }
     cout<<"Hasilnya adalah "<<hasil<<endl;
 }
 
@@ -106,11 +109,13 @@ void op_dasar::arcsin(float a){
 void op_dasar::arccos(float a){
     hasil = (acos(a)/PI)*180;
     cout<<hasil;
+    cout<<"Hasilnya adalah "<<hasil<<endl;
 }
 
 void op_dasar::arctan(float a){
     hasil = (atan(a)/PI)*180;
     cout<<hasil;
+    cout<<"Hasilnya adalah "<<hasil<<endl;
 }
 
 void op_dasar::pilihan() {
