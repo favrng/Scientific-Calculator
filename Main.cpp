@@ -43,13 +43,13 @@ void op_dasar::substract(float a, float b){
     else if (a>=b){
         hasil = a-b;
     }
-    cout<<"hasilnya adalah "<<hasil<<endl;
+    cout<<"Hasilnya adalah "<<hasil<<endl;
 
 }
 
 void op_dasar::multiplication(float a, float b){
     hasil = a*b;
-    cout << "hasilnya adalah " << hasil << endl;
+    cout << "Hasilnya adalah " << hasil << endl;
 }
 
 void op_dasar::division (float a, float b){
@@ -59,19 +59,19 @@ void op_dasar::division (float a, float b){
 
 void op_dasar::exponent(float a, float b){
     hasil= pow(a,b);
-    cout<<"hasilnya adalah "<<hasil<<endl;
+    cout<<"Hasilnya adalah "<<hasil<<endl;
 }
 
 void op_dasar::inverse_sin(float a){
     hasil = (asin(a)/PI)*180;
-    cout<<"hasilnya adalah "<<hasil<<endl;
+    cout<<"Hasilnya adalah "<<hasil<<endl;
 }
 void op_dasar::sinus (float a){
-    hasil = round(sin(a/180*PI));
-    if (hasil == -0){
-        hasil = 0;
+    hasil = round((sin(a/180*PI))*10000)/10000;
+    if (hasil == -0.00){
+        hasil = 0.00;
     }
-    cout<<"hasilnya adalah "<<hasil<<endl;
+    cout<<"Hasilnya adalah "<<hasil<<endl;
 }
 
 void op_dasar::pilihan() {
